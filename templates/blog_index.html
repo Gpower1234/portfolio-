@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block page %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog index</title>
+</head>
+
+<body>
+    <div style=" margin-top: 10px" class="col-md-8 offset-md-2">
+        <h4>post</h4>
+        <hr>
+        {% for post in posts %}
+        <a style="text-decoration: none; font-size: 20px; color: teal" href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a><br><hr>
+        {% comment %}
+        <small>
+            {{ post.created_on }} |&nbsp;
+            Categories:&nbsp;
+            {% for type in category %}
+            <a href="{% url 'blog-category' type.category %}">
+                {{ type.name }}
+            </a>&nbsp;
+            {% endfor %}
+        </small>
+        <p>{{ post.body | slice:"400" }}</p>
+        {% endcomment %}
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+{% endblock %}
+
+

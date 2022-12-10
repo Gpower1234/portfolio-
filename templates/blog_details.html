@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block page %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+
+<body>
+    <div style="margin-top: 30px;" class="col-md-8 offset-md-2">
+        <h5 style="color: teal;">{{ post.title }} </h5><p>{{ post.created_on }}</p>
+        <p>{{ post.body }}</p>
+    </div>
+
+    <div style="margin-top: 30px;" class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <p style="color: #0f0;">{{ message }}</p>
+        {% endfor %}
+        <form method="post">
+            {% csrf_token %}
+            
+            <p>Leave a comment</p>
+            <div style="margin-left: 2px;" class="form-group row">
+                <div class="col-xs-3">
+                    <input type="text" name="author" class="form-control input-sm" placeholder="Name" maxlength="60" required="" id="id_author">
+                </div>
+            </div>
+    
+            <div style="margin-left: 2px;" class="form-group row">
+                <div class="col-xs-2">
+                    <textarea name="body" cols="22" rows="5" class="form-control" placeholder="Comment" required="" id="id_body"></textarea>
+                </div>
+            </div>
+            
+            <div style="margin-left: 2px;" class="form-group row">
+                <div class="col-xs-3">
+                    <button style="color: teal;" class="btn btn-xs" type="submit">submit</button> 
+                </div>         
+            </div>
+
+        </form>
+    </div>
+  
+    <div style="margin-top: 30px;" class="col-md-8 offset-md-2">
+        
+        {% if count <= 1 %}
+        <p>{{ count }} comment on {{ post.title }}</p>
+        {% else %}
+        <p>{{ count }} comments on {{ post.title }}</p>
+        {% endif %}
+        <p>Comments:</p>
+        {% for comment in comments %}
+        <div>
+            <b style="color: teal">{{ comment.author }}</b>
+            <p>{{ comment.body }}</p>
+        </div><hr>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
+
+{% endblock %}
+
+
