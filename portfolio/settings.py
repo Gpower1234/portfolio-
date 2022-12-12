@@ -22,10 +22,10 @@ SECRET_KEY = config('SECRET_KEY')
 #SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-if not DEBUG:
-    CSRF_TRUSTED_ORIGINS = ['https://Gpee.up.railway.app']
+#if not DEBUG:
+    #CSRF_TRUSTED_ORIGINS = ['https://Gpee.up.railway.app']
 
 ALLOWED_HOSTS = ['*']
 
