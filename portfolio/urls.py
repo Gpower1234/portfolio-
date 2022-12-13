@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('power/', admin.site.urls),
     path('', ProjectView, name="project"),
     path('project/<int:pk>/', ProjectDetail, name='project'),
     path('blog', BlogIndex, name='blog'),
