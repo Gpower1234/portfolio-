@@ -57,7 +57,7 @@
         <p>Comments:</p>
         {% for comment in comments %}
         <div>
-            <b style="color: teal">{{ comment.author }}</b>
+            <p style="color: teal">{{ comment.author }}</p>
             <p>{{ comment.created_on|timesince }} ago</p>
             <p>{{ comment.body }}</p>
         </div><hr>
