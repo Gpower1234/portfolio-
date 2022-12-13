@@ -5,7 +5,7 @@ from django.contrib import messages
 # Create your views here.
 
 def BlogIndex(request):
-    posts = Post.objects.all().order_by('created_on')
+    posts = Post.objects.all().order_by('-created_on')
     context = {
         "posts": posts,
     }
