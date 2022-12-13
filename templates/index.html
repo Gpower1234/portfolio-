@@ -21,8 +21,8 @@
             <div class="card mb-2">
                 <img style="width: 400px; height: 200px; margin-left: 15px" class="card-img-top" src="{{ project.image.url }}">
                 <div class="card-body">
-                    <h5 style="color: #666;" class="card-title">{{ project.title }}</h5>
-                    <p style="color: #666;" class="card-text">{{ project.description | slice:"100" }}</p>
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description | slice:"400" }}</p>
                     <a href="{{ project.url }}">{{ project.url }}</a>
                     <a href="{% url 'project' project.pk %}" class="btn btn-primary">Read More</a>
                 </div>
