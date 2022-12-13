@@ -23,7 +23,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p class="card-text">{{ project.description | slice:"400" }}</p>
-                    <a href="{{ project.url }}">{{ project.url }}</a>
+                    <a href="{{ project.url }}">{{ project.url }}</a><br>
                     <a href="{% url 'project' project.pk %}" class="btn btn-primary">Read More</a>
                 </div>
             </div>
