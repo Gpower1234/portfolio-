@@ -58,6 +58,7 @@
         {% for comment in comments %}
         <div>
             <b style="color: teal">{{ comment.author }}</b>
+            <p>{{ date|timesince }} ago</p>
             <p>{{ comment.body }}</p>
         </div><hr>
         {% endfor %}
