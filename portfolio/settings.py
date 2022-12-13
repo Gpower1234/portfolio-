@@ -24,7 +24,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CSRF_TRUSTED_ORIGINS = ['https://Gpee.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://*.Gpee.up.railway.app']
 
 ALLOWED_HOSTS = ['*']
 
