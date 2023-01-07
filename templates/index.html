@@ -19,7 +19,7 @@
     {% for project in projects %}
         <div class="col-md-4">
             <div class="card mb-2">
-                <img style="width: 400px; height: 200px; margin-left: 15px" class="card-img-top" src="{{ project.image.url }}">
+                <img style="width: 400px; height: 200px; margin-left: 15px" class="card-img-top" src="{% static project.image.url %}">
                 <div class="card-body">
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p class="card-text">{{ project.description | slice:"400" }}</p>
