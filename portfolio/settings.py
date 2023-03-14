@@ -26,7 +26,7 @@ DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = ['https://*.Gpee.up.railway.app']
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 
 # Application definition
 
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 '''
 DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
-}'''
+}
 
 DATABASES = {
     'default': {
@@ -89,7 +89,7 @@ DATABASES = {
         'PORT': config('PORT'),
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
