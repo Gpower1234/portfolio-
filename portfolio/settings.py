@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 from decouple import config
 #from dotenv import load_dotenv
-import dj_database_url
+#import dj_database_url
 
 #DATABASE_URL = os.getenv("DATABASE_URL")
 
