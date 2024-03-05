@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 from decouple import config
 #from dotenv import load_dotenv
-#import dj_database_url
+import dj_database_url
 
 #DATABASE_URL = os.getenv("DATABASE_URL")
 
@@ -24,7 +24,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', 'now.sh', '127.0.0.1', 'localhost']
 
 #CSRF_TRUSTED_ORIGINS = ['.vercel.app']
 
@@ -77,19 +77,19 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-'''
+
 DATABASES = {
     'default': dj_database_url.parse(config('DATABASE_URL'))
 }
-'''
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
