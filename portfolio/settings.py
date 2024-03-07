@@ -26,7 +26,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = config('ORIGIN')
+CSRF_TRUSTED_ORIGINS = ['port.applikuapp.com']
 
 # Application definition
 
