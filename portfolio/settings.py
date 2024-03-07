@@ -26,7 +26,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-#CSRF_TRUSTED_ORIGINS = ['.vercel.app']
+CSRF_TRUSTED_ORIGINS = [config('ORIGIN')]
 
 # Application definition
 
