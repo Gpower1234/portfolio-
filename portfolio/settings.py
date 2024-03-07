@@ -26,7 +26,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-#CSRF_TRUSTED_ORIGINS = ['port.applikuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://port.applikuapp.com']
 
 # Application definition
 
@@ -123,7 +123,6 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['port.applikuapp.com']
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
