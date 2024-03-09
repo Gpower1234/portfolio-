@@ -6,7 +6,7 @@ class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     technology = models.CharField(max_length=30)
-    image = models.ImageField(upload_to='project-image', null=True)
+    image = models.ImageField(upload_to='project-image', blank=True)
     url = models.URLField(blank=True)
 
     def __str__(self):
